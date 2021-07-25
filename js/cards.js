@@ -4,7 +4,6 @@ const galleryList = document.querySelector('.js-gallery');
 const modalImg = document.querySelector('.lightbox__image');
 const modal = document.querySelector('.lightbox');
 const button = document.querySelector('.lightbox__button');
-
 const markup = gallery
   .map(
     ({ preview, original, description }, index) =>
@@ -64,6 +63,7 @@ function onArrowLeft() {
   }
   newSrc(index, -1);
 }
+
 function onArrowRight() {
   let index = +modalImg.dataset.index;
   if (index === gallery.length - 1) {
